@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fafafa;
+  }
+
+  h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+  }
+
+  h2 {
+    font-size: 15pt;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: #2a2a2a;
+  }
+
+  h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: #3a3a3a;
+  }
+
+  p {
+    font-size: 10pt;
+    margin-bottom: 8px;
+  }
+
+  code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+  }
+
+  pre {
+    background-color: #f0f0f0;
+    padding: 12px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 12px 0;
+  }
+
+  blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 12px;
+    color: #666;
+    margin: 12px 0;
+    font-style: italic;
+  }
+}
+
+@layer components {
+  .container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+  }
+
+  @media print {
+    .container-custom {
+      padding: 20px;
+    }
+    .no-print {
+      display: none;
+    }
+  }
+
+  .section-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 10pt;
+    font-family: inherit;
+    transition: border-color 0.2s;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  }
+
+  .textarea-field {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 10pt;
+    font-family: inherit;
+    min-height: 80px;
+    resize: vertical;
+    transition: border-color 0.2s;
+  }
+
+  .textarea-field:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 10pt;
+    cursor: pointer;
+    padding: 4px 0;
+  }
+
+  .checkbox-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #4a90e2;
+  }
+
+  .table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+  }
+
+  .table-custom th,
+  .table-custom td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 10pt;
+  }
+
+  .table-custom th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+
+  .table-custom td {
+    background-color: #ffffff;
+  }
+
+  .btn-primary {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 10pt;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .btn-primary:hover {
+    background-color: #357abd;
+  }
+
+  .btn-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 10px 24px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 10pt;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background-color: #e5e5e5;
+  }
+}
+
