@@ -21,6 +21,7 @@ interface SystemDesignProps {
     selection: boolean
     fileUpload: boolean
     externalData: boolean
+    httpTrigger: boolean
   }
   outputOptions: {
     plainText: boolean
@@ -104,6 +105,18 @@ export default function SystemDesign({
               />
               <span>
                 <strong>外部データ</strong>（API経由など ※今回は対象外でもOK）
+              </span>
+            </label>
+
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                className="checkbox-input"
+                checked={inputOptions.httpTrigger}
+                onChange={(e) => onInputOptionChange('httpTrigger', e.target.checked)}
+              />
+              <span>
+                <strong>トリガー・HTTPによる起動</strong>（Webhook、API経由での自動実行など）
               </span>
             </label>
           </div>

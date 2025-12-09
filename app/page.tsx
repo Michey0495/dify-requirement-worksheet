@@ -35,6 +35,7 @@ export default function Home() {
     selection: false,
     fileUpload: false,
     externalData: false,
+    httpTrigger: false,
   })
 
   const [outputOptions, setOutputOptions] = useState({
@@ -105,6 +106,7 @@ export default function Home() {
         selection: false,
         fileUpload: false,
         externalData: false,
+        httpTrigger: false,
       })
       setOutputOptions({
         plainText: false,
@@ -152,6 +154,17 @@ export default function Home() {
         formData={formData}
         onInputChange={handleInputChange}
       />
+
+      <footer className="mt-12 pt-8 border-t border-gray-200 no-print">
+        <div className="flex gap-4 justify-center">
+          <button onClick={handleExport} className="btn-primary">
+            データをエクスポート
+          </button>
+          <button onClick={handleReset} className="btn-secondary">
+            リセット
+          </button>
+        </div>
+      </footer>
     </div>
   )
 }
