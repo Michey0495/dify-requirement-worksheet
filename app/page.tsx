@@ -5,6 +5,7 @@ import BusinessInventory from '@/components/BusinessInventory'
 import SystemDesign from '@/components/SystemDesign'
 import DevelopmentSteps from '@/components/DevelopmentSteps'
 import ExportGuide from '@/components/ExportGuide'
+import PrivacySecurity from '@/components/PrivacySecurity'
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -308,6 +309,8 @@ ${formData.step3 || '未入力'}
       )}
 
       <ExportGuide />
+
+      <PrivacySecurity />
 
       <footer className="mt-12 pt-8 border-t border-gray-200 no-print">
         <div className="flex gap-4 justify-center flex-wrap">
